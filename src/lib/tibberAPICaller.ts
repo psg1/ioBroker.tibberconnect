@@ -20,7 +20,7 @@ export class TibberAPICaller extends TibberHelper {
 
 	async updateHomesFromAPI(): Promise<string[]> {
 		const currentHomes = await this.tibberQuery.getHomes();
-		this.adapter.log.debug("Get homes from tibber api: " + JSON.stringify(currentHomes));
+		this.adapter.log.debug("Get homes from tibber api: " + JSON.stringify(['tibberconnect.0.Homes.30e50fb6-0af9-4347-82cd-70664ee871da']));
 		const homeIdList: string[] = [];
 		for (const homeIndex in currentHomes) {
 			const currentHome = currentHomes[homeIndex];
